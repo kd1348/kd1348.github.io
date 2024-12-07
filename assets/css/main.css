@@ -1878,6 +1878,11 @@ input, select, textarea {
 			#nav a span {
 				display: none;
 			}
+			#nav a {
+				width: 0.7em;
+			
+		}
+	
 
 		}
 
