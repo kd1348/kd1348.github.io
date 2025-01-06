@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+header .container {
+  max-width: 800px;
+  margin: auto;
+}
+
+header input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 90%;
+}
+
+nav {
+  background: #444;
+  color: #fff;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+  width: 100%;
+}
+
+section {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sop-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.sop-list li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Allow button and details to stack vertically */
+}
+
+button {
+  background: #2b5af4;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.details {
+  display: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #f4f4f4;
+  border-left: 4px solid #007bff;
+  text-align: left; /* Optional: Keep this to align content neatly */
+  margin-left: 50%; /* Adjust to center the details under the button */
+  transform: translateX(-50%); /* Center the details relative to the button */
+}

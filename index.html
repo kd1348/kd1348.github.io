@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Base & SOPs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Knowledge Base</h1>
+      <input type="text" id="search" placeholder="Search" oninput="filterSOPs()">
+    </div>
+  </header>
+  <main>
+    <section id="general">
+      <h2>Standard Operating Procedures</h2>
+      <ul class="sop-list">
+        <li><button onclick="toggleDetails(this)">Create new items in NetSuite/Site Portal</button>
+          <div class="details">
+            <strong>Step 1:</strong> Duplicate an exisiting matrix item on the corresponding site portal<br>
+            <strong>Step 2:</strong> Edit product name, description, photos, tax information and SKU (e.g. JMIP1000-MTX) on item.<br>
+            <strong>Step 3:</strong> Edit item price, weight, and SKU on all size variations (If a size is missing, add it in attributes tab).<br>
+            <strong>Step 4:</strong> Publish new item<br>
+            <strong>Step 5:</strong> Sync with NetSuite
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="general">
+      <h2>Make Scenario Documentation</h2>
+      <ul class="sop-list">
+        <li><button onclick="toggleDetails(this)">"Create New Project Folders"</button></span>
+          <div class="details">
+            <strong>Step 1:</strong> This Make scenario runs when a user submits a form by clicking "Create a new Project" in the "Project Team > Client Projects" section of the Knack Live Site.
+            <a href='https://uniservinc.knack.com/unifkgom#client-projects/create-new-project-and-folders/'>(Here)</a> <br>
+            <strong>Step 2:</strong> First, it creates a record in the "Projects" Knack table and populates it with data from the form (Brand, Store Number, Location Information, Monday Pulse Project Link, Project Description).<br>
+            <strong>Step 3:</strong> Then, using data pulled from the "Projects" Knack table, the scenario creates a unique Google Drive folder for the new project within its respective brand's exisiting folder.
+            <a href='https://drive.google.com/drive/folders/1CWgT0fERzFnkb6GmxT9L0g9UT4HwuvcR'>(Here)</a><br>
+            <strong>Step 4:</strong> Next, a collection of nested Google Drive folders are created within the Project folder (Emails, Estimating, Project Files, and Service are the top level folders with more specific folders inside). 
+            <br>
+            <strong>Step 5:</strong> Finally, the scenario updates the Project Knack table to include the location of this new folder system. 
+          </div></li>
+        <li><button onclick="toggleDetails(this)">"Link Freight Request to Project"</button>
+          <div class="details">
+            <strong>Step 1:</strong> This Make scenario runs when a user submits a form by clicking "Create New Order" in the "Warehouse Team" section of the Knack Live Site.
+            <br>
+            <strong>Step 2:</strong> First, it retrieves the new record in the "Pallet-Serial Reports" Knack table and determines whether it is a project or non-project order via the Google Drive folder link.<br>
+            <strong>Step 3:</strong> If the order is in fact a project order, the scenario links the 2 records by updating the data in both tables to reflect their connection. 
+          </div>
+        </li>
+        <li><button onclick="toggleDetails(this)">"Create Inventory Report"</button>
+          <div class="details">
+            <strong>Step 1:</strong> This Make scenario runs when a user submits a form by clicking "New Inventory Report" in the "Project Team > Inventory Details" section of the Knack Live Site.
+            <a href='https://uniservinc.knack.com/unifkgom#inventory-details/new-inventory-report'>(Here)</a> <br>
+            <strong>Step 2:</strong> First, a new row is created in the "Report Request" Knack table and a Google Sheet is created from a template.<br>
+            <strong>Step 3:</strong> Next, the scenario is routed depending on the type of report specified in the initial form (All FKG or Single Reporting Group)
+            <br>
+            <strong>Step 4:</strong> Both routes then access inventory data from NetSuite and use it to populate the Google Sheet Template.<br>
+            <strong>Step 5:</strong> Finally, the scenario appends the new row in Knack with the file ID and location of the new sheet.</div>
+        </li>
+        
+      </ul>
+    </section>
+
+  </main>
+  <script src="script.js"></script>\
+</body>
+</html>
