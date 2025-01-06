@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align content at the top */
   min-height: 100vh;
   text-align: center;
 }
@@ -16,6 +16,7 @@ header {
   color: #fff;
   padding: 1rem 0;
   width: 100%;
+  margin-bottom: 1rem; /* Add some space after the header */
 }
 
 header .container {
@@ -75,7 +76,7 @@ section {
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column; /* Allow button and details to stack vertically */
+  flex-direction: column; /* Stack the button and details */
 }
 
 button {
@@ -99,7 +100,7 @@ button:hover {
   padding: 0.5rem;
   background: #f4f4f4;
   border-left: 4px solid #007bff;
-  text-align: left; /* Optional: Keep this to align content neatly */
-  margin-left: 50%; /* Adjust to center the details under the button */
-  transform: translateX(-50%); /* Center the details relative to the button */
+  text-align: left; /* Keep this for neat alignment */
+  margin-left: 50%; /* Center the details under the button */
+  transform: translateX(-50%); /* Center the details */
 }
