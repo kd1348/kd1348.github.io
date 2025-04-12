@@ -185,6 +185,13 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
+
+@media (min-width: 480px) {
+	h1 {
+	  font-size: 64px;
+	}
+  }
+
 .intro p {
 	color: #fff;
 	font-size: 22px;
