@@ -301,7 +301,7 @@
             // Set the title
             if(link.attr('title')){
                 var titleWrap = $('<span>', { 'class': 'nivo-lightbox-title' });
-                titleWrap.text(link.attr(''));
+                titleWrap.text(link.attr('Project Title'));
             } else {
                 $('.nivo-lightbox-title-wrap').html('');
             }
